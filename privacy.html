@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | HK Labs</title>
+<meta name="description" content="How HK Labs handles information from Google Calendar, Google Sheets and Gmail when it runs a booking system for a business.">
+<meta name="theme-color" content="#1F4D43">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F4D43'/%3E%3Crect x='8' y='8' width='7' height='7' rx='1.5' fill='%23F0A202'/%3E%3Crect x='17' y='8' width='7' height='7' rx='1.5' fill='%23ffffff'/%3E%3Crect x='8' y='17' width='7' height='7' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10231F;
+    --pine: #1F4D43;
+    --pine-soft: #2C6757;
+    --paper: #F2F5F3;
+    --white: #FFFFFF;
+    --signal: #F0A202;
+    --signal-deep: #D98F00;
+    --muted: #54635E;
+    --line: #D3DCD8;
+    --font: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  a:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: var(--signal);
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: background-color .15s ease;
+  }
+  .btn:hover { background: var(--signal-deep); }
+  .btn-sm { padding: 10px 20px; font-size: 0.98rem; }
+
+  /* Top band: header and title share one dark pine block */
+  .top {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--pine-soft) -20%, var(--pine) 40%, #17382F 100%);
+    color: var(--white);
+  }
+  .top::before {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 40px;
+    width: 340px;
+    height: 340px;
+    border-radius: 72px;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(18deg);
+  }
+  .top::after {
+    content: "";
+    position: absolute;
+    right: 150px;
+    bottom: -120px;
+    width: 220px;
+    height: 220px;
+    border-radius: 56px;
+    background: rgba(240, 162, 2, 0.18);
+    transform: rotate(18deg);
+  }
+  .top .wrap { position: relative; z-index: 1; }
+  .site-header { padding: 18px 0; }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; text-decoration: none; }
+  .brand svg { width: 30px; height: 30px; display: block; }
+  .top a:focus-visible { outline-color: var(--signal); }
+  .nav { display: flex; align-items: center; gap: 22px; }
+  .nav-link { font-weight: 500; text-decoration: none; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .nav-link:hover { border-bottom-color: var(--signal); }
+  .foot-links { display: flex; gap: 20px; }
+
+  .title-block { padding: 64px 0 88px; max-width: 760px; }
+  .title-block h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.4rem, 5.4vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    font-variation-settings: "opsz" 96;
+  }
+  .lede { margin: 0 0 20px; max-width: 36rem; font-size: 1.2rem; color: rgba(255, 255, 255, 0.82); }
+  .updated { margin: 0; font-size: 0.98rem; color: rgba(255, 255, 255, 0.7); }
+
+  /* Layout */
+  .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 72px; padding-top: 56px; padding-bottom: 96px; align-items: start; }
+
+  .toc { position: sticky; top: 28px; }
+  .toc-title { margin: 0 0 14px; font-weight: 700; font-size: 0.98rem; letter-spacing: -0.005em; }
+  .toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+  .toc a {
+    display: block;
+    margin-left: -2px;
+    padding: 6px 0 6px 16px;
+    border-left: 2px solid transparent;
+    font-size: 0.97rem;
+    line-height: 1.35;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .toc a:hover { color: var(--ink); border-left-color: var(--signal); }
+
+  .doc { max-width: 700px; }
+  .summary {
+    margin: 0 0 56px;
+    padding: 28px 30px;
+    background: var(--white);
+    border-radius: 20px;
+    border-left: 5px solid var(--signal);
+    box-shadow: 0 24px 48px -32px rgba(16, 35, 31, 0.35);
+  }
+  .doc .summary h2 { margin: 0 0 14px; padding: 0; border: 0; font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; }
+  .summary ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .summary li { display: flex; gap: 12px; align-items: flex-start; margin: 0; padding: 0; }
+  .summary svg { flex: none; width: 20px; height: 20px; margin-top: 4px; }
+
+  .doc h2 {
+    margin: 0 0 12px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+    scroll-margin-top: 24px;
+  }
+  .doc section { margin-bottom: 40px; }
+  .doc p { margin: 0 0 16px; }
+  .doc ul.plain { margin: 0 0 16px; padding-left: 1.25rem; }
+  .doc ul.plain li { margin-bottom: 8px; padding-left: 4px; }
+  .doc ul.plain li::marker { color: var(--pine); }
+  .doc a:not(.btn) { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: var(--signal); }
+  .doc a:not(.btn):hover { text-decoration-color: var(--ink); }
+
+  .contact-box {
+    margin-top: 8px;
+    padding: 32px 34px;
+    background: var(--pine);
+    color: var(--white);
+    border-radius: 24px;
+  }
+  .contact-box p { margin: 0 0 20px; color: rgba(255, 255, 255, 0.86); }
+
+  .site-footer { padding: 28px 0 40px; border-top: 1px solid var(--line); font-size: 0.95rem; color: var(--muted); }
+  .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+  .site-footer a { text-decoration: underline; text-underline-offset: 4px; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; gap: 0; padding-top: 40px; padding-bottom: 72px; }
+    .toc { display: none; }
+    .title-block { padding: 40px 0 64px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 18px; }
+    .summary { padding: 22px 20px; }
+    .contact-box { padding: 26px 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="HK Labs home">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#FFFFFF"/>
+          <rect x="8" y="8" width="7" height="7" rx="1.5" fill="#F0A202"/>
+          <rect x="17" y="8" width="7" height="7" rx="1.5" fill="#1F4D43"/>
+          <rect x="8" y="17" width="7" height="7" rx="1.5" fill="#1F4D43"/>
+        </svg>
+        HK Labs
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="btn btn-sm js-mail" href="#contact">Email HK Labs</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="title-block">
+      <h1>Privacy Policy</h1>
+      <p class="lede">What our booking app can access in your Google account, how it is used, and how to take that access away.</p>
+      <p class="updated">Last updated: November 16, 2026</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="On this page">
+    <p class="toc-title">On this page</p>
+    <ul>
+      <li><a href="#access">What the app accesses</a></li>
+      <li><a href="#handled">What information is handled</a></li>
+      <li><a href="#use">How it is used</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+      <li><a href="#removing">Removing access or data</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="doc">
+    <div class="summary">
+      <h2>The short version</h2>
+      <ul>
+        <li>
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="#1F4D43"/><path d="M5.5 10.4l3 3 6-6.4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>The app reaches Google Calendar, Google Sheets and Gmail, and only after the business owner approves it.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="#1F4D43"/><path d="M5.5 10.4l3 3 6-6.4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>We do not sell your information, use it for advertising, or share it with anyone else.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="10" fill="#1F4D43"/><path d="M5.5 10.4l3 3 6-6.4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>You can remove access at any time from your Google account.</span>
+        </li>
+      </ul>
+    </div>
+
+    <p>HK Labs ("we") builds booking automation for small businesses. This page explains what information our app accesses and how it is used. We operate from Canada.</p>
+
+    <section id="access">
+      <h2>What the app accesses</h2>
+      <p>When a business owner connects their Google account, our app can access only the parts they approve:</p>
+      <ul class="plain">
+        <li><strong>Google Calendar</strong>, to add and check booking appointments.</li>
+        <li><strong>Google Sheets</strong>, to save booking details and a contact list.</li>
+        <li><strong>Gmail</strong>, to send booking confirmation emails from the owner's account.</li>
+      </ul>
+    </section>
+
+    <section id="handled">
+      <h2>What information is handled</h2>
+      <p>When a customer submits a booking form, their name, email, phone number, address, requested service and preferred date and time are processed so the booking can be recorded and confirmed.</p>
+    </section>
+
+    <section id="use">
+      <h2>How it is used</h2>
+      <p>Information is used only to run that business's booking system: creating the calendar event, saving the booking, and sending the owner and customer their messages. We do not sell the information, use it for advertising, or share it with anyone else. Booking details are not kept by us after the automation runs; they remain in the business owner's own Google account.</p>
+      <p>Our use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </section>
+
+    <section id="notifications">
+      <h2>Notifications</h2>
+      <p>Booking alerts to the business owner may be sent through Telegram or email.</p>
+    </section>
+
+    <section id="removing">
+      <h2>Removing access or data</h2>
+      <p>A business owner can remove our app's access at any time from the permissions page of their Google account. To ask us to delete anything, or with any privacy question, use the contact button below.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes</h2>
+      <p>If this policy changes, the date at the top of this page will be updated.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>Questions about your privacy, or a request to delete your information? Send us a message.</p>
+        <a class="btn js-mail" href="#contact">Email HK Labs</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 HK Labs, Canada</span>
+    <span class="foot-links"><a href="./">Home</a><a href="about.html">About</a></span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var parts = ['hkuang2004', 'gmail.com'];
+    var href = 'mailto:' + parts.join('@') + '?subject=Privacy%20question';
+    document.querySelectorAll('.js-mail').forEach(function (el) { el.setAttribute('href', href); });
+  })();
+</script>
+</body>
+</html>
