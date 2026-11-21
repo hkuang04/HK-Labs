@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | QuexFlow</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F131A">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #0F131A; --pine: #141922; --signal: #D5DAE3; --signal-deep: #B9C0CC; --paper: #F3F4F7; --muted: #5A6372; --font: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  main { max-width: 520px; }
+  .mark-link { display: inline-block; margin-bottom: 28px; border-radius: 10px; }
+  .mark-link:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+  .mark { width: 44px; height: 44px; display: block; border-radius: 11px; }
+  .more { margin: 28px 0 0; font-size: 0.95rem; }
+  .more a { color: var(--blue); font-weight: 600; }
+  h1 { margin: 0 0 14px; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.04; letter-spacing: -0.035em; font-weight: 700; }
+  p { margin: 0 0 28px; color: var(--muted); font-size: 1.15rem; }
+  .btn { display: inline-block; padding: 14px 26px; background: var(--signal); color: var(--ink); font-weight: 600; text-decoration: none; border-radius: 999px; }
+  .btn:hover { background: var(--signal-deep); }
+  .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+
+  /* Dark theme: near-black, chrome silver, touches of blue */
+  :root { --ink: #EEF1F6; --paper: #0F131A; --muted: #A3ADBD; --line: #262E3B; --pine: #161C27; --pine-soft: #212A3A; --blue: #7FB2FF; --blue-deep: #4F86E8; color-scheme: dark; }
+  body { background: #0F131A; }
+  .btn { background: linear-gradient(180deg, #F7F9FC, #C3C9D5); color: #0F131A; }
+  .btn:hover { background: linear-gradient(180deg, #FFFFFF, #D5DAE3); }
+  .skip { background: #C3C9D5; color: #0F131A; }
+  .site-header { background: rgba(15, 19, 26, 0.94); border-bottom: 1px solid #1B2230; }
+  .nav-link:hover, .nav-link[aria-current="page"] { border-bottom-color: var(--blue); }
+  .hero { background: radial-gradient(720px 440px at 82% 6%, rgba(79, 134, 232, 0.2), transparent 65%); }
+  .panel { background: linear-gradient(160deg, #1B2333, #121722); border: 1px solid #2A3446; box-shadow: 0 40px 80px -40px rgba(79, 134, 232, 0.4); }
+  .flow li + li::before { background: var(--blue); }
+  .tile { background: linear-gradient(180deg, #F3F5FA, #DCE1EB); color: #0F131A; }
+  .tile-sub { color: #4A566B; }
+  .date-block { background: #BFD6FF; color: #0F131A; }
+  .chips li { background: #161C27; border-color: var(--line); }
+  .section-light { background: #131822; }
+  .price-col li::before { background-color: #3F72D9; }
+  .data { background: #0B0E13; color: #EEF1F6; }
+  .data a.text-link { color: #9CC3FF; text-decoration-color: rgba(156, 195, 255, 0.5); }
+  .data a.text-link:hover { text-decoration-color: #9CC3FF; }
+  .data a:focus-visible { outline-color: #9CC3FF; }
+  .text-link { text-decoration-color: rgba(127, 178, 255, 0.55); }
+  .text-link:hover { text-decoration-color: var(--blue); }
+  .cta, .contact-box { background: linear-gradient(160deg, #1B2333, #121722); border: 1px solid #2A3446; }
+  .top { background: radial-gradient(620px 320px at 86% 0%, rgba(79, 134, 232, 0.3), transparent 70%), linear-gradient(160deg, #1A2231, #0F131A 70%); }
+  .top::after { background: rgba(127, 178, 255, 0.12); }
+  .summary { background: #161C27; border: 1px solid #262E3B; border-left: 5px solid var(--blue); box-shadow: none; }
+  .doc a:not(.btn) { text-decoration-color: var(--blue); }
+  .doc a:not(.btn):hover { text-decoration-color: #fff; }
+  .toc a:hover { border-left-color: var(--blue); }
+</style>
+</head>
+<body>
+<main>
+  <a class="mark-link" href="https://quexflow.ca/" aria-label="QuexFlow home">
+  <img class="mark" src="logo-tile.png" width="44" height="44" alt="" aria-hidden="true">
+  </a>
+  <h1>We could not find that page.</h1>
+  <p>The link may be out of date or mistyped. The homepage has everything you need, including how online booking works for your business.</p>
+  <a class="btn" href="https://quexflow.ca/">Go to the homepage</a>
+  <p class="more"><a href="https://quexflow.ca/about.html">About QuexFlow</a> &nbsp;·&nbsp; <a href="https://quexflow.ca/privacy.html">Privacy Policy</a></p>
+</main>
+</body>
+</html>
